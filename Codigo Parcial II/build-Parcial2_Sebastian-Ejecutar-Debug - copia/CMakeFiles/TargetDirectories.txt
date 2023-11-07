@@ -1,0 +1,7 @@
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/Parcial2_Sebastian.dir
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/edit_cache.dir
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/list_install_components.dir
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/install.dir
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/install/local.dir
+C:/Users/JANUS/Desktop/build-Parcial2_Sebastian-Ejecutar-Debug/CMakeFiles/install/strip.dir

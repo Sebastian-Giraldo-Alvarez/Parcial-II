@@ -1,0 +1,17 @@
+#ifndef REGLAS_H
+#define REGLAS_H
+#include <iostream>
+#include <time.h>
+#include <cstdlib>
+#include <ctime>
+using namespace std;class Reglas
+{
+public:
+    Reglas();
+    //metodo para identificar si la posicion seleccionada por el jugador es valida
+    string **Regla_sandwich(string **Matriz,char Blanco, char Negro, int *posicion, bool turno, char Ficha_turno, string Nombre);
+    bool Terminar_el_juego(string **Matriz,char Ficha_turno, char Blanco, char Negro);//metodo que me permite identificar la cantidad de fichas en el tablero, y si esta lleno o no se pueden hacer mas jugadas se termina
+    int Contar_numfiguras(string **Matriz, char Figura, string Nombre);//metodo que hace conteo de las fichas segun caracteristicas que se ingresen cuando se ijn
+};
+
+#endif // REGLAS_H

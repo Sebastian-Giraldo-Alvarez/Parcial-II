@@ -1,0 +1,50 @@
+#include "tablero.h"
+
+string **Tablero::getMatriz() const
+{
+    return Matriz;
+}
+
+void Tablero::setMatriz(string **newMatriz)
+{
+    Matriz= newMatriz;
+}
+
+Tablero::Tablero()
+{
+
+}
+
+string **Tablero::Tablero_inicial(char Blanco, char Negro)//Metodo que sirva para establecer la matriz base para poder jugar.
+{
+    string **Matriz, numero;//se define el puntero doble
+    int contar;
+    char palabra=65, palabra2=49;//se definen dos variables tipo char para poder posicionar los numeros y letras para que sirvan de guia al momento de elegir una posicion para poner una ficha
+    Matriz = new string*[10];//apartado para reservar las filas del puntero doble
+    for (int inicio = 0; inicio < 10; ++inicio){
+        Matriz[inicio]=new string[10];//apartado para reservar las columnas
+    }
+    for (int Filas = 0; Filas < 9; ++Filas) {
+        for (int Columnas = 0; Columnas < 9; ++Columnas) {
+            if(Filas==0 && Columnas==0)*(*(Matriz+Filas)+Columnas) = " ";//Este es el espacio que hay al pri
+            else if(Filas==0&&Columnas!=0)*(*(Matriz+Filas)+Columnas)= palabra, palabra++;//Cuando las filas sean 0 y las columnas diferentes de 0, se le asignara una letra
+            else if(Columnas==0&&Filas!=0)*(*(Matriz+Filas)+Columnas) = palabra2, palabra2++;//Esta será al contrario del condicional de arriba
+            else if(Filas== 4&&Columnas==4)*(*(Matriz+Filas)+Columnas)= Blanco;//Este condicional es para poner las fichas por defaul que estan en el tablero, asi como las tres de abajo
+            else if(Filas==4&&Columnas==5)*(*(Matriz+Filas)+Columnas) = Negro;
+            else if(Filas==5&&Columnas==4)*(*(Matriz+Filas)+Columnas) = Negro;
+            else if(Filas==5&&Columnas==5)*(*(Matriz+Filas)+Columnas) = Blanco;
+            else *(*(Matriz+Filas)+Columnas) = " ";//Aqui se llena de casillas vacias la matriz, pero solo zonas especificas
+        }
+    }
+    return Matriz;
+}
+
+void Tablero::Imprimir_tablero(string **Matriz)
+{
+    for (int inicio = 0; inicio < 9; ++inicio) {
+        for (int inicio2 = 0; inicio2 < 9; ++inicio2) {
+            cout<<Matriz[inicio][inicio2]<<" ";
+        }
+        cout <<endl;
+    }
+}
